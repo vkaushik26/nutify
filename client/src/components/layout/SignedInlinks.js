@@ -44,12 +44,12 @@ class SignedInlinks extends Component {
     return (
       <ul className='navbar-nav'>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/' style={{ color: "white" }}>
+          <NavLink className='nav-link' to='/' style={{ color: "black" }}>
             Dashboard
           </NavLink>
         </li>
         <li className='nav-item'>
-          <NavLink className='nav-link' to='/create' style={{ color: "white" }}>
+          <NavLink className='nav-link' to='/create' style={{ color: "black" }}>
             Add Meal
           </NavLink>
         </li>
@@ -57,12 +57,12 @@ class SignedInlinks extends Component {
           <NavLink
             className='nav-link'
             to='/profile'
-            style={{ color: "white" }}
+            style={{ color: "black" }}
           >
             Profile
           </NavLink>
         </li>
-        <li className='nav-item' style={{ color: "white" }}>
+        <li className='nav-item' style={{ color: "black" }}>
           <NavLink className='nav-link' to='#' onClick={this.Logout}>
             Logout
           </NavLink>

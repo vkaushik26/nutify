@@ -13,7 +13,7 @@ const Navbar = () => {
       <></>
     ) : (
       <Link to='/' className='navbar-brand'>
-        <h2>nutrify</h2>
+        <h2>Nutify</h2>
       </Link>
     );
   // render proper jsx
