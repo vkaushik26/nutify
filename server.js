@@ -9,7 +9,7 @@ const router = require("./src/routes/routerv1"); //load routes
 
 const app = express(); // create express app
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 const db_username = process.env.MONGOUSER;
 const db_password = process.env.MONGOPASS;
 
@@ -17,12 +17,12 @@ const db_password = process.env.MONGOPASS;
 app.use("*", cors());
 
 // mongodb atlas configuration
-const url = `mongodb+srv://${db_username}:${db_password}@cluster0.kyswz.mongodb.net/nutify-app?retryWrites=true&w=majority`;
+const url = 'mongodb+srv://Vaibhav:Test@cluster0.kyswz.mongodb.net/nutifyusers?retryWrites=true&w=majority';
 mongoose.connect(url, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-});
+}).then(response => console.log("mongo connected"))
 
 //  bodyParser to parse incoming request bodies in a middleware before our handlers
 app.use(
