@@ -1,0 +1,41 @@
+{
+  "name": "nutrify.me",
+  "version": "1.0.0",
+  "description": "simple node api",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,client\" -c \"bgBlue.bold,bgMagenta.bold\" \"nodemon server.js\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkaushik26/nutify-app.git"
+  },
+  "author": "VAIBHAV KAUSHIK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkaushik26/nutify-app/issues"
+  },
+  "homepage": "https://github.com/vkaushik26/nutify-app#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.2.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.10",
+    "request": "^2.88.2",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.3"
+  }
+}
